@@ -1,0 +1,75 @@
+@import './Utils.scss';
+
+.input-list {
+  width: 900px;
+  margin: auto;
+  @include flex-vertical-center;
+  flex-direction: column;
+
+  .input-wrapper {
+    width: 100%;
+    @include flex-vertical-center;
+    margin-bottom: 20px;
+
+    .button + .button {
+      margin-top: 10px;
+    }
+
+    .button-wrapper {
+      @include flex-center-sort;
+      flex-direction: column;
+      margin-left: 10px;
+    }
+  }
+
+  input {
+    width: 100%;
+  }
+
+  select {
+    width: 900px;
+    margin-bottom: 20px;
+  }
+
+  select,
+  input {
+    padding-left: 10px;
+    height: 70px;
+    background-color: initial;
+    border-color: lightpink;
+    color: white;
+    font-size: 20px;
+  }
+
+  .word-input-wrapper {
+    width: 100%;
+
+    input {
+      width: 884px;
+      margin-bottom: 15px;
+    }
+
+    textarea {
+      height: 500px;
+      width: 886px;
+      padding-left: 10px;
+      border-color: lightpink;
+      font-size: 25px;
+      resize: none;
+    }
+
+    .button-wrapper {
+      width: 100%;
+      display: flex;
+      justify-content: flex-end;
+
+      .button {
+        margin: {
+          top: 10px;
+          left: 10px;
+        }
+        font-family: 'CookieRun Regular';
+      }
+    }
+  }
+}

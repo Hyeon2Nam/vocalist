@@ -1,0 +1,19 @@
+{
+  "libraryList": ["English", "Japanese"],
+  "English": [
+    {
+      "name": "1",
+      "content": "apple 사과\n orange 오렌지"
+    },
+    {
+      "name": "2",
+      "content": "apple 사과\n orange 오렌지"
+    }
+  ],
+  "Japanese": [
+    {
+      "name": "aaaa",
+      "content": "リンゴ 사과\n オレンジ 오렌지"
+    }
+  ]
+}

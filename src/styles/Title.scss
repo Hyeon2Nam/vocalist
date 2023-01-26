@@ -1,0 +1,17 @@
+@import './Utils.scss';
+
+.title {
+  width: 100%;
+  height: 80px;
+  background-color: $mainColor;
+  @include flex-center-sort;
+  margin-bottom: 80px;
+
+  font-size: 30px;
+  font-family: 'CookieRun Bold';
+
+  a {
+    text-decoration: none;
+    color: white;
+  }
+}

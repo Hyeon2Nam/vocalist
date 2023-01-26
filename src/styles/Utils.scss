@@ -1,0 +1,53 @@
+$tablet-size: 758px;
+$desktop-size: 1024px;
+
+$mainColor: #ffbb00;
+
+@mixin custom-border {
+  border: 2px solid #ffb6c1;
+}
+
+@mixin mobile {
+  @media (max-width: #{$tablet-size - 1}) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (min-width: #{$tablet-size}) and (max-width: #{$desktop-size}) {
+    @content;
+  }
+}
+
+@mixin pc {
+  @media (min-width: #{$desktop-size}) {
+    @content;
+  }
+}
+
+@mixin flex-center-sort {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin flex-end-sort {
+  display: flex;
+  justify-content: flex-end;
+}
+
+@mixin flex-edge-sort {
+  display: flex;
+  justify-content: space-between;
+}
+
+@mixin flex-vertical-center {
+  display: flex;
+  align-items: center;
+}
+
+@mixin pink-border-template {
+  background-color: $back-pink;
+  border: 0.2px solid lightpink;
+  border-radius: 10px;
+}
