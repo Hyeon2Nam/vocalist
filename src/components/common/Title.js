@@ -5,7 +5,7 @@ import '../../styles/Title.scss';
 const Title = () => {
   return (
     <div className="title">
-      <Link to="/">단어장</Link>
+      <Link to="/">💎</Link>
     </div>
   );
 };

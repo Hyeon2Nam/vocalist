@@ -1,14 +1,37 @@
 @import './Utils.scss';
 
 .library {
-  .list-wrapper {
-    margin: {
-      top: 20px;
-      left: 80px;
-      right: 80px;
-    }
-    .book {
-      // a
-    }
+  margin: {
+    top: 20px;
+    left: 80px;
+    right: 80px;
+  }
+
+  .category {
+    font-size: 19px;
+    width: 100%;
+    padding: 15px;
+  }
+
+  .category + .category {
+    border-top: 2px solid silver;
+  }
+
+  .category + .book-list {
+    border-top: 1px solid silver;
+  }
+
+  .book-list + .book-list {
+    border-top: 0.5px solid silver;
+  }
+
+  .book-list {
+    padding: 15px;
+  }
+
+  .book {
+    margin: 10px 0px 10px 30px;
+    text-align: initial;
+    white-space: break-spaces;
   }
 }

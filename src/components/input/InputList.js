@@ -1,24 +1,24 @@
 import React, { useEffect, useState } from 'react';
 import SelectList from '../common/SelectList';
-import libraryData from '../../data/libraryData.json';
 import TwoButtonSet from '../common/TwoButtonSet';
 import InputField from '../common/InputField';
+import libraryData from '../../data/libraryData.json';
 import '../../styles/InputList.scss';
 
 const InputList = () => {
   const [selectList, setSelectList] = useState([]);
   const [addMode, setAddMode] = useState(false);
   const [newBook, setNewBook] = useState({
-    library: '',
     name: '',
     content: '',
   });
   const [newlibrary, setNewLibrary] = useState('');
   const [selectLibrary, setSelectLibrary] = useState('');
-  const [libraryList, setLibraryList] = useState(libraryData.libraryList);
+  const [library, setLibrary] = useState(libraryData);
+  const [download, setDownload] = useState(false);
 
   const CleanField = () => {
-    setNewBook({ ...newBook, name: '', content: '' });
+    setNewBook({ name: '', content: '' });
   };
 
   const NewBookHandler = (e) => {
@@ -45,33 +45,40 @@ const InputList = () => {
   const AddNewLibrary = () => {
     if (!newlibrary) return;
 
-    setSelectLibrary('');
-    setLibraryList(libraryList.concat(newlibrary));
+    setLibrary({
+      ...library,
+      libraryList: library.libraryList.concat(newlibrary),
+      [newlibrary]: [],
+    });
     setNewLibrary('');
+    setSelectLibrary('');
+  };
+
+  const AddNewBook = () => {
+    if (!newBook || !selectLibrary) return;
+
+    setLibrary({
+      ...library,
+      [selectLibrary]: library[selectLibrary].concat(newBook),
+    });
+    CleanField();
+    setDownload(true);
   };
 
   const saveChages = () => {
     const element = document.createElement('a');
-    const file = new Blob([JSON.stringify(newBook)], {
+    const file = new Blob([JSON.stringify(library)], {
       type: 'application/json',
     });
     element.href = URL.createObjectURL(file);
-    element.download = `${newBook.name}.json`;
+    element.download = 'libraryData.json';
     document.body.appendChild(element);
     element.click();
   };
 
-  const AddNewBook = () => {
-    if (!newBook) return;
-
-    // window.localStorage.setItem(newBook.name, JSON.stringify(newBook));
-    CleanField();
-    saveChages();
-  };
-
   const setSetectList = () => {
     setSelectList(
-      libraryList.map((book) => {
+      library.libraryList.map((book) => {
         return (
           <option key={book} value={book}>
             {book}
@@ -82,19 +89,19 @@ const InputList = () => {
   };
 
   useEffect(() => {
-    if (libraryList) {
+    if (library.libraryList) {
       setSetectList();
-      // window.localStorage.setItem('library', JSON.stringify(libraryList));
     }
   }, []);
 
   useEffect(() => {
     setSetectList();
-  }, [libraryList]);
+  }, [library.libraryList]);
 
   useEffect(() => {
-    setNewBook({ ...newBook, library: selectLibrary });
-  }, [selectLibrary]);
+    if (download) saveChages();
+    setDownload(false);
+  }, [download]);
 
   return (
     <div className="input-list">
