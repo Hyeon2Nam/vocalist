@@ -6,6 +6,12 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import './fonts/Font.scss';
 
+// const setInit = () => {
+//   window.localStorage.setItem('library', '');
+// };
+
+// setInit();
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <BrowserRouter>

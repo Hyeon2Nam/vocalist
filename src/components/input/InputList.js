@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-// import { writeJsonFile } from 'write-json-file';
 import SelectList from '../common/SelectList';
 import libraryData from '../../data/libraryData.json';
 import TwoButtonSet from '../common/TwoButtonSet';
@@ -7,15 +6,28 @@ import InputField from '../common/InputField';
 import '../../styles/InputList.scss';
 
 const InputList = () => {
-  const [bookList, setBookList] = useState([]);
+  const [selectList, setSelectList] = useState([]);
   const [addMode, setAddMode] = useState(false);
-  const [newBook, setNewBook] = useState({ name: '', content: '' });
+  const [newBook, setNewBook] = useState({
+    library: '',
+    name: '',
+    content: '',
+  });
   const [newlibrary, setNewLibrary] = useState('');
-  const [library, setLibrary] = useState('');
+  const [selectLibrary, setSelectLibrary] = useState('');
+  const [libraryList, setLibraryList] = useState(libraryData.libraryList);
+
+  const CleanField = () => {
+    setNewBook({ ...newBook, name: '', content: '' });
+  };
 
   const NewBookHandler = (e) => {
     const { name, value } = e.target;
     setNewBook({ ...newBook, [name]: value });
+  };
+
+  const NewLibraryHandler = (e) => {
+    setNewLibrary(e.target.value);
   };
 
   const AddModeHandler = () => {
@@ -23,51 +35,66 @@ const InputList = () => {
   };
 
   const LibraryHandler = (e) => {
-    setLibrary(e.target.value);
+    setSelectLibrary(e.target.value);
 
     if (e.target.value === 'addBook') {
       AddModeHandler();
     }
   };
 
-  const NewLibraryHandler = (e) => {
-    setNewLibrary(e.target.value);
-  };
-
-  const CleanField = () => {
-    setNewBook({ name: '', content: '' });
-  };
-
   const AddNewLibrary = () => {
     if (!newlibrary) return;
 
-    console.log(newlibrary);
+    setSelectLibrary('');
+    setLibraryList(libraryList.concat(newlibrary));
     setNewLibrary('');
+  };
+
+  const saveChages = () => {
+    const element = document.createElement('a');
+    const file = new Blob([JSON.stringify(newBook)], {
+      type: 'application/json',
+    });
+    element.href = URL.createObjectURL(file);
+    element.download = `${newBook.name}.json`;
+    document.body.appendChild(element);
+    element.click();
   };
 
   const AddNewBook = () => {
     if (!newBook) return;
 
-    console.log(newBook);
-    // if (libraryData[library]) {
-    //   libraryData =
-    // }
+    // window.localStorage.setItem(newBook.name, JSON.stringify(newBook));
     CleanField();
+    saveChages();
+  };
+
+  const setSetectList = () => {
+    setSelectList(
+      libraryList.map((book) => {
+        return (
+          <option key={book} value={book}>
+            {book}
+          </option>
+        );
+      }),
+    );
   };
 
   useEffect(() => {
-    if (libraryData.libraryList) {
-      setBookList(
-        Object.keys(libraryData).map((book) => {
-          return (
-            <option key={book} value={book}>
-              {book}
-            </option>
-          );
-        }),
-      );
+    if (libraryList) {
+      setSetectList();
+      // window.localStorage.setItem('library', JSON.stringify(libraryList));
     }
   }, []);
+
+  useEffect(() => {
+    setSetectList();
+  }, [libraryList]);
+
+  useEffect(() => {
+    setNewBook({ ...newBook, library: selectLibrary });
+  }, [selectLibrary]);
 
   return (
     <div className="input-list">
@@ -81,9 +108,9 @@ const InputList = () => {
         />
       ) : (
         <SelectList
-          list={bookList}
+          list={selectList}
           category="책장"
-          value={library}
+          value={selectLibrary}
           setValue={LibraryHandler}
         />
       )}

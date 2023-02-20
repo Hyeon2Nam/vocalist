@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 const SelectList = ({ list, category, value, setValue }) => {
   return (
     <div className="select-list">
-      <select name="pets" value={value} onChange={setValue}>
+      <select value={value} onChange={setValue}>
         <option disabled value="">
           {category} 선택
         </option>
