@@ -1,12 +1,14 @@
 @import './Utils.scss';
 
 .study {
-  .multiple-choice {
-    .word {
-      font-size: 30px;
-      margin-bottom: 50px;
-    }
+  margin-top: 200px;
 
+  .word {
+    font-size: 30px;
+    margin-bottom: 50px;
+  }
+
+  .multiple-choice {
     .options {
       display: flex;
       flex-direction: column;
@@ -15,18 +17,55 @@
       width: 100%;
       margin-bottom: 30px;
 
+      .css-18kkns6-MuiButtonBase-root-MuiButton-root,
       .css-y24n04-MuiButtonBase-root-MuiButton-root {
         width: 500px;
-				height: 55px;
+        height: 55px;
         display: flex;
         font-size: 20px;
         text-transform: none;
+      }
+
+      .css-18kkns6-MuiButtonBase-root-MuiButton-root
+        + .css-18kkns6-MuiButtonBase-root-MuiButton-root {
+        margin-top: 10px;
       }
 
       .css-y24n04-MuiButtonBase-root-MuiButton-root
         + .css-y24n04-MuiButtonBase-root-MuiButton-root {
         margin-top: 10px;
       }
+    }
+  }
+
+  .question {
+    color: white;
+
+    .answer-filed {
+      display: flex;
+      flex-direction: column;
+    }
+    .answer-button {
+      width: 200px;
+    }
+
+    .css-1u3bzj6-MuiFormControl-root-MuiTextField-root {
+      display: flex;
+      align-items: center;
+    }
+
+    .MuiInput-root {
+      border-bottom: 1px solid $mainColor;
+    }
+
+    input {
+      width: 500px;
+      color: white;
+      font-size: 20px;
+    }
+
+    button {
+      margin-top: 20px;
     }
   }
 }

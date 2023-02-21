@@ -14,9 +14,13 @@ const theme = createTheme({
     complete: {
       main: '#96B0E5',
     },
-    disable: {
-      main: '#a17f96f',
+    action: {
+      disabledBackground: '#ac89b9',
+      borderColor: '#eabbfd',
     },
+  },
+  notchedOutline: {
+    borderColor: '#eabbfd',
   },
 });
 

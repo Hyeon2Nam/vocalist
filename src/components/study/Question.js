@@ -1,24 +1,117 @@
 /* eslint-disable no-unused-vars */
-import React from 'react';
-import { useDispatch, useSelector } from 'react-redux';
+import React, { useEffect, useState } from 'react';
+import { useSelector } from 'react-redux';
+import { useNavigate } from 'react-router-dom';
+import { Button } from '@mui/material/index';
+import TextField from '@mui/material/TextField';
+import CustomColorButton from '../common/CustomColorButton';
 import * as util from '../common/utils';
 
 const Question = () => {
+  const navigate = useNavigate();
   const { content } = useSelector(({ data }) => ({
     content: data.content,
   }));
-  const tmp = [...content];
+  const [word, setWord] = useState('');
+  const [answer, setAnswer] = useState('');
+  const [wordList, setWordList] = useState([]);
+  const [lang, setLang] = useState(util.getRandom(0, 2));
+  const [disable, setDisable] = useState(true);
+  const [input, setInput] = useState('');
+  const [show, setShow] = useState(false);
 
-  const setExam = () => {
-    for (let i = 0; i < content.length; ) {
-      const s = util.getRandom(0, tmp.length);
-      // console.log(tmp[s]);
-      tmp.splice(s, 1);
-      i += 1;
+  const handleShow = () => {
+    setShow(!show);
+  };
+  const setWordLang = (set) => {
+    if (!set) return;
+
+    if (lang) {
+      setWord(set[1]);
+      setAnswer(set[0]);
+    } else {
+      setWord(set[0]);
+      setAnswer(set[1]);
     }
   };
 
-  return <div>Question Question {setExam()}</div>;
+  const setExam = () => {
+    if (wordList.length === 0) {
+      navigate('/library');
+      return;
+    }
+
+    const s = util.getRandom(0, wordList.length);
+
+    setWordLang(wordList[s]);
+    setWordList(wordList.filter((w, i) => i !== s));
+    setDisable(true);
+    setInput('');
+    setShow(false);
+  };
+
+  const handleInput = (e) => {
+    const { value } = e.target;
+
+    setInput(value);
+  };
+
+  useEffect(() => {
+    if (!content || content == null) {
+      navigate('/library');
+      return;
+    }
+
+    if (content) setWordList([...content]);
+  }, []);
+
+  useEffect(() => {
+    if (answer === input) {
+      setDisable(false);
+    } else {
+      setDisable(true);
+    }
+  }, [input]);
+
+  return (
+    <div className="question">
+      <div className="word">{word !== '' && word}</div>
+      {word !== '' && (
+        <div className="answer-filed">
+          <CustomColorButton
+            button={
+              <TextField
+                variant="standard"
+                value={input}
+                onChange={handleInput}
+              />
+            }
+          />
+          <CustomColorButton
+            className="answer-button"
+            button={
+              <Button className="button" variant="text" onClick={handleShow}>
+                {show ? '정답 숨기기' : '정답 보기'}
+              </Button>
+            }
+          />
+          {show && answer}
+        </div>
+      )}
+      <CustomColorButton
+        button={
+          <Button
+            className="button"
+            variant="contained"
+            onClick={setExam}
+            disabled={word === '' ? false : disable}
+          >
+            {word === '' ? 'START' : 'NEXT'}
+          </Button>
+        }
+      />
+    </div>
+  );
 };
 
 export default Question;
