@@ -1,0 +1,32 @@
+@import './Utils.scss';
+
+.study {
+  .multiple-choice {
+    .word {
+      font-size: 30px;
+      margin-bottom: 50px;
+    }
+
+    .options {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      margin-bottom: 30px;
+
+      .css-y24n04-MuiButtonBase-root-MuiButton-root {
+        width: 500px;
+				height: 55px;
+        display: flex;
+        font-size: 20px;
+        text-transform: none;
+      }
+
+      .css-y24n04-MuiButtonBase-root-MuiButton-root
+        + .css-y24n04-MuiButtonBase-root-MuiButton-root {
+        margin-top: 10px;
+      }
+    }
+  }
+}
