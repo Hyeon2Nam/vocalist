@@ -56,6 +56,12 @@ const Question = () => {
     setInput(value);
   };
 
+  const handleOnKeyPress = (e) => {
+    if (e.key === 'Enter' && disable === false) {
+      setExam();
+    }
+  };
+
   useEffect(() => {
     if (!content || content == null) {
       navigate('/library');
@@ -84,6 +90,7 @@ const Question = () => {
                 variant="standard"
                 value={input}
                 onChange={handleInput}
+                onKeyPress={handleOnKeyPress}
               />
             }
           />
