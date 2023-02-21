@@ -13,6 +13,10 @@
     padding: 15px;
   }
 
+  .wrapper {
+    @include flex-edge-sort;
+  }
+
   .category + .category {
     border-top: 2px solid silver;
   }
