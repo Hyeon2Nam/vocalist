@@ -22,7 +22,7 @@ const Study = () => {
         const i = word.indexOf(' ');
         return [word.slice(0, i), word.slice(i + 1)];
       });
-      tmp.pop();
+
       dispatch(remadeContent(tmp));
     }
   };
@@ -35,6 +35,7 @@ const Study = () => {
   return (
     <div className="study">
       {makeNewContent()}
+      {/* <Question /> */}
       {firstComplete ? <Question /> : <MultipleChoice />}
     </div>
   );

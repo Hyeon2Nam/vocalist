@@ -43,6 +43,7 @@ const Question = () => {
 
     const s = util.getRandom(0, wordList.length);
 
+    setLang(util.getRandom(0, 2));
     setWordLang(wordList[s]);
     setWordList(wordList.filter((w, i) => i !== s));
     setDisable(true);
@@ -91,6 +92,8 @@ const Question = () => {
                 value={input}
                 onChange={handleInput}
                 onKeyPress={handleOnKeyPress}
+                autoComplete="off"
+                type="text"
               />
             }
           />

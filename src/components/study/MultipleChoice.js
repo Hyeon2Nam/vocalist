@@ -101,6 +101,7 @@ const MultipleChoice = () => {
     if (!word || !answer) return;
 
     setOption();
+    setLang(util.getRandom(0, 2));
   }, [answer]);
 
   if (content && content.length <= 1) {
