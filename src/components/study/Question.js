@@ -19,6 +19,7 @@ const Question = () => {
   const [disable, setDisable] = useState(true);
   const [input, setInput] = useState('');
   const [show, setShow] = useState(false);
+  const [index, setIndex] = useState(0);
 
   const handleShow = () => {
     setShow(!show);
@@ -40,6 +41,8 @@ const Question = () => {
       navigate('/library');
       return;
     }
+
+    setIndex(index + 1);
 
     const s = util.getRandom(0, wordList.length);
 
@@ -82,6 +85,12 @@ const Question = () => {
 
   return (
     <div className="question">
+      단어 맞추기 <br /> <br />
+      {word && (
+        <div className="question-index">
+          {index}/{content.length}
+        </div>
+      )}
       <div className="word">{word !== '' && word}</div>
       {word !== '' && (
         <div className="answer-filed">

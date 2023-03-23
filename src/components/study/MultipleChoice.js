@@ -19,6 +19,7 @@ const MultipleChoice = () => {
   const [options, setOptions] = useState([]);
   const [lang, setLang] = useState(util.getRandom(0, 2));
   const [disable, setDisable] = useState(true);
+  const [index, setIndex] = useState(0);
 
   const setOption = () => {
     const tmp = [...content];
@@ -70,6 +71,8 @@ const MultipleChoice = () => {
       return;
     }
 
+    setIndex(index + 1);
+
     const s = util.getRandom(0, wordList.length);
 
     setWordLang(wordList[s]);
@@ -116,8 +119,14 @@ const MultipleChoice = () => {
 
   return (
     <div className="multiple-choice">
+      객관식 문제 <br /> <br />
       {word && (
         <div>
+          {word && (
+            <div className="question-index">
+              {index}/{content.length}
+            </div>
+          )}
           <div className="word">{word}</div>
           <div className="options">
             {options.length !== 0 &&

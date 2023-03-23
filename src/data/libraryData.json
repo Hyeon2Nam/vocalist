@@ -1,14 +1,41 @@
 {
-  "libraryList": ["English", "Japanese"],
+  "libraryList": ["English", "Japanese", "기초영어"],
   "English": [
     {
       "name": "day 1",
       "content": "resume 이력서\nopening 공석, 결원, 개장, 개시\napplicant 지원자, 신청자\nrequirement 필요조건, 요건\nmeet 만족시키다\nqualified 자격 있는, 적격의\ncandidate 후보자, 지원자\nconfidence 확신, 자신, 신임\nhighly 매우, 대단히\nprofessional 전문적인, 직업의, 전문가\ninterview 면접, 면접을 보다\nhire 고용하다\ntraining 교육, 훈련\nreference 추천서, 참고\nposition 일자리, 직책, 두다\nachievement 성취, 달성\nimpressed 인상 깊게 생각하는, 감명을 받은\nexcellent 훌륭한, 탁월한\neligible 자격이 있는, 적격의\nidentify 알아보다, 확인하다\nassociate 관련시키다\ncondition 조건\nemployment 고용\nlack ~이 없다\nmanagerial 관리의\ndiligent 성실한\nfamiliar 익숙한, 친숙한\nproficiency 숙달, 능숙\nprospective 장래의, 미래의\nappeal 관심을 끌다, 매력적이다\nspecialize ~을 전공하다, 전문적으로 다루다\napprehensive 걱정하는, 염려하는\nconsultant 고문, 컨설턴트\nentitle 자격을 주다\ndegree 학위\npayroll 임금 대장, 급료 명부\nrecruit 모집하다\ncertification 증명서, 증명\noccupation 직업\nwage 임금, 급료"
     },
     {
-      "name": "day2",
-      "content": "attire 복장, 옷차림새\ncode 규범, 관례, 암호\nconcern 우려, 걱정, 문제, 일\npolicy ~을 걱정스럽게 하다, 영향을 미치다, 관련되다\ncomply 준수하다, 따르다\nregulation 규정\nexception 예외\nadhere 지키다, 고수하다\nseverely 엄격하게, 심하게\nrefrain 자제하다, 삼가다\npermission 허락, 허가\naccess ~에 접근하다, 도달하다, 이용 권한, 접근, 통로\nthoroughly 철저하게, 완전히, 대단히\nrevise 수정하다, 변경하다\napproach 접근법, 처리 방법, 다가오다, 가까워지다\napproval 승인, 인가\nform 종류, 유형, 양식\nimmediately 즉시, 곧\ninspection 점검, 검사\narrangement 준비, 마련, 주선\nprocedure 절차\nnegative 부정적인, 비관적인\nmandate 명령하다, 지시하다, 권한, 지시, 명령\neffect 효력, 효과, 영향, 결과로서 ~을 가져오다\ndrastically 심하게, 과감하게, 철처하게\naccording_to ~에 따라\nenable 가능하게 하다\nstandard 기준, 표준\nconstant 지속적인, 끊임없이 계속하는\nact 법령, 결의서, 행위, 행동\ncompensation 보상금, 보상\nban 금지, 금지하다\nobligation 의무, 책임\nauthorize ~을 인가하다, 권한을 부여하다\nprohibit 금지하다\nabolish 폐지하다\nenforce 시행하다, 집행하다\nhabit 습관, 버릇\nlegislation 법률, 법규\nrestrict 한정하다, 제한하다"
+      "name": "day 2",
+      "content": "attire 복장, 옷차림새\ncode 규범, 관례, 암호\nconcern 우려, 걱정, 문제, 일\npolicy ~을 걱정스럽게 하다, 영향을 미치다, 관련되다\ncomply 준수하다, 따르다\nregulation 규정\nexception 예외\nadhere 지키다, 고수하다\nseverely 엄격하게, 심하게\nrefrain 자제하다, 삼가다\npermission 허락, 허가\naccess ~에 접근하다, 도달하다, 이용 권한, 접근, 통로\nthoroughly 철저하게, 완전히, 대단히\nrevise 수정하다, 변경하다\napproach 접근법, 처리 방법, 다가오다, 가까워지다\napproval 승인, 인가\nform 종류, 유형, 양식\nimmediately 즉시, 곧\ninspection 점검, 검사\narrangement 준비, 마련, 주선\nprocedure 절차\nnegative 부정적인, 비관적인\nmandate 명령하다, 지시하다, 권한, 지시, 명령\neffect 효력, 효과, 영향, 결과로서 ~을 가져오다\ndrastically 심하게, 과감하게, 철저하게\naccording to)~에 따라\nenable 가능하게 하다\nstandard 기준, 표준\nconstant 지속적인, 끊임없이 계속하는\nact 법령, 결의서, 행위, 행동\ncompensation 보상금, 보상\nban 금지, 금지하다\nobligation 의무, 책임\nauthorize ~을 인가하다, 권한을 부여하다\nprohibit 금지하다\nabolish 폐지하다\nenforce 시행하다, 집행하다\nhabit 습관, 버릇\nlegislation 법률, 법규\nrestrict 한정하다, 제한하다"
+    },
+    {
+      "name": "day 3",
+      "content": "accustomed 익숙한\ncorporation 주식회사, 법인\ndemanding 요구가 많은, 힘든\ncolleague 동료\ndivision 부서\nrequest 요청, 요청하다\nefficiently 효율적으로\nmanage ~을 경영하다, 가까스로 하다\nsubmit 제출하다\ndirectly 곧바로\nremind ~에게 상기시키다, 일깨우다\ninstruct 지시하다, 가르치다\ndeadline 마감일, 마감 시간\nsample 견본, 샘플, 표본\nnotify ~에게 통지하다, 알리다\nperform 행하다, 실행하다\nmonitor 감독하다, 감시하다, 검토하다\ndeserve ~할 만하다, ~할 가치가 있다\nattendance 출근, 출석\nabsolutely 절대적으로, 완전히\ndelegate 위임하다, 대표\nattentively 주의 깊게, 조심스럽게\nsupervision 감독\nworkshop 워크숍, 연수\ndraw 끌다, 끌어당기다\nrevision 수정, 개정\nreluctantly 마지못해, 꺼려하여\nacquaint ~에게 숙지시키다, 잘 알게 하다\nconvey 전달하다\ncheck 검사하다, 조사하다, 확인하다\nheadquarters 본부\nfile 정리하다, 철하다, 정식으로 제기하다, 제출하다\noversee 감독하다\ninvolved 관여하는, 관계된, 연루된\nconcentrate 집중하다, 집중시키다"
+    },
+    {
+      "name": "day 4",
+      "content": "lax 느슨한, 규율에 못 미치는\nprocrastinate 미루다, 꾸물거리다\ncombined 결합된, 합동의\naccomplish 성취하다\nvoluntarily 자발적으로\nundertake 떠맡다\nassume 사실이라고 생각하다, 맡다\noccasionally 가끔, 때때로\nemployee 직원, 고용인\nassist 돕다, 조력하다\nsatisfied 만족하는, 만족스러워하는\nmanner 방식, 태도\nresponsible 책임이 있는, 책임져야 할\nconduct 수행하다\nadjust 적용하다\npersonnel 직원, 인원, 인사과\nagree 동의하다\nsupervise 감독하다, 지도하다\ncoworker 동료, 협력자\ndirect ~에게 길을 안내하다, 가르쳐 주다\nconfidential 기밀의, 내밀한\nassign 배정하다, 할당하다\nleading 선도적인, 일류의, 가장 중요한, 선두적인\nformal 격식을 갖춘\nremove 해임하다, 제거하다\ncollect 모으다, 수집하다\ncoordinate 조정하다\nhardly 거의 ~하지 않다\nabstract 추상적인, 막연한\ndirectory 주소록\naccountable 책임이 있는\nskillfully 능숙하게, 솜씨 있게\nexclusive 독점적인, 배타적인\nintention 의지, 의향\ntransform 바꾸다, 변모시키다\nrespectful 정중한, 존중하는\nduplicate 사본\ncontrary 반대\ndisturbing 충격적인, 불안감을 주는, 방해하는\nengage 관여하다, 종사하다\nfoster 촉진하다, 육성하다\nneutrality 중립성, 중립\nwidely 널리\nexternally 외부에서, 외부적으로"
+    },
+    {
+      "name": "오답노트",
+      "content": ""
     }
   ],
-  "Japanese": [{ "name": "aaaa", "content": "リンゴ 사과\nオレンジ 오렌지" }]
+  "Japanese": [
+    {
+      "name": "day 1",
+      "content": "位置 위치\n汚い 더럽다\n転ぶ 넘어지다\n商品 상품\n冷える 차가워지다, 식히다\n燃える 타다\n過去 과거\n禁煙 금연\n手術 수술\n早退 조퇴\n回す 돌리다, 회전시키다\n下線 밑줄\n計算 계산\n主要 주요\n直接 직접\n結ぶ 잇다, 매다, 묶다\n折れる 부러지다, 꺾이다\n加える 더하다, 보태다\n税金 세금\n努力 노력\n方向 방향\n申し込み 신청\n観客 관객\n訓練 훈련\n到着 도착\n測る 달다, 재다\n豆 콩\n共通 공통\n個人 개인\n独立 독립\n払う 내다, 지불하다\n丸い 둥글다\n表す 나타내다\n経営学 경영학\n想像 상상\n荷物 짐, 화물\n変化 변화\n汚れる 더러워지다\n美しい 아름답다\n血液型 혈액형\n朝食 조식, 아침밥\n分類 분류\n干す 말리다\n首 목\n支給 지급\n伝える 전하다\n平均 평균\n湖 호수\n相手 상대\n応用 응용\n検査 검사\n自然 자연\n食器 식기\n割れる 갈라지다, 깨지다\n暑い 두껍다\n覚える 기억하다, 외우다\n広告 광고\n集中 집중\n大会 대회\n一般的だ 일반적이다\n替える 바꾸다, 교환하다\n呼吸 호흡\n商業 상업\n横 옆, 가로\n浅い 얕다\n苦しい 괴롭다, 난처하다\n出張 출장\n貯金 저금\n生える 나다\n笑う 웃다\n改札 개찰\n事情 사정\n席 자리\n通知 통지\n文章 문장\n各地 각지\n実力 실력\n選手 선수\n根 뿌리, 근본, 근원\n留守 부재중\n合図 신호\n笑顔 웃는 얼굴\n完成 완성\n困る 곤란하다\n卒業 졸업\n短い 짧다\n汗 땀\n横断 횡단\n配る 분배하다, 배포하다\n島 섬\n他人 타인\n以降 이후\n固い 단단하다, 굳다\n外科 외과\n示す 가리키다, 보이다, 나타내다\n平日 평일\n応募 응모\n返す 돌리다, 돌려주다\n過去 과거\n首都 수도\n地球 지구\n表面 표면\n遅れる 늦다\n疑問 의문\n情報 정보\n到着 도착\n深い 깊다\n折る 접다, 부러뜨리다, 굽히다\n価格 가격\n協力 협력\n単語 단어\n発表 발표\n移す 자리를 옮기다, 실행에 옮기다\n組む 팔짱을 끼다, 다리를 꼬다, 조직을 짜다\n件 건, 사항\n通勤 통근\n息 숨\n失業 실업\n包む 싸다, 포장하다\n発見 발견\n岩 바위\n空席 공석\n苦労 고생\n順番 순번\n得意だ 잘하다\n夫婦 부부"
+    }
+  ],
+  "기초영어": [
+    {
+      "name": "day 1",
+      "content": "go cycling)자전거를 타러 가다\nwork overtime)야근하다\ntake a shower)샤워하다\nplay the piano)피아노를 연주하다\ngo for a swim)수영을 하러 가다\nwash the dishes)설거지를 하다\ntalk to her friends)친구들과 이야기하다\nlook for a job)직장을 구하다\nsleep in bed)침대에서 자다\nhave an argument)논쟁을 하다\nput on a jacket)재킷을 입다\ntake a break)휴식을 취하다\non weekends)주말마다\nevery morning)매일 아침\nmuch 많은\nforeign country)외국\nwant to)~하기를 원하다\ntry 노력하다\nimprove 향상시키다\nskil 능력, 기술\nbreak 휴식\nat the moment)지금 당장\ntreadmill 러닝머신\nproperly 제대로\nthis summer)이번 여름\njet lag)시차증, 시차로 인한 피로감\novertime 초과 근무\nspecial promotion)특별 행사\nsecond thoughts)재고\nusually 보통\nargument 논쟁\noffer 제공하다\na variety of)다양한\nresident 주민\ngood value for money)가성비가 좋은\nfriendly 친근한\nequipment 장비\ntidy 정돈된\nhave a special offer)특별 행사를 하다\nsign up for)등록하다\nhighly recommend)강력 추천하다\nwork out)운동하다\nworkout 운동\nrip off)바가지를 씌우다\na rip-off)바가지\ndrop out)자퇴하다\na dropout)자퇴생"
+    },
+    {
+      "name": "day 2",
+      "content": "graduate from college)대학을 졸업하다\nlive in a shared house)쉐어 하우스에 살다\nmove in with friends)친구와 함께 살다\nget an A)A학점을 받다\ndrop a course)수강을 취소하다\nget a scholarship)장학금을 타다\ntake a final exam)기말 시험을 보다\ndrop out of school)자퇴하다\ntake a test)시험을 보다\ncram for an exam)벼락치기 공부를 하다\ntake a writing course)작문 수업을 듣다\nhave a group discussion)그룹 토의를 하다\nsit in a class)청강하다\nreview classmaterials)수업 자료를 검토하다\nexam 시험\nwin a scholarship)장학금을 타다\nfinal exam)기말 시험\ntake an English course)영어 수업을 듣다\nlast semester)지난 학기\nmess up the test)시험을 망치다\nhave a good time)즐거운 시간을 보내다\nclass reunion)동창회\nsit in a class)청강하다\npass by)지나가다\nwait for a bus)버스를 기다리다\ncram for an exam)벼락치기로 시험 공부를 하다\nstand in line)줄 서 있다\nget ready for dinner)저녁 준비를 하다\nsomething is killing ~ 때문에 아파 죽겠다\nbeat ~을 이기다\ndrop a course)수업을 취소하다\nwear one's seatbelt)안전 밸트를 매다\nwin a gold medal)금메달을 따다\na place to stay)머물 곳\nleave the window open)창문을 열어 두다\nfor the last year)지난 한 해 동안\nfall off)~에서 떨어지다\nkeep in touch)계속 연락하고 지내다"
+    }
+  ]
 }

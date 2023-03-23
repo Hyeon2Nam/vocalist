@@ -1,7 +1,15 @@
 @import './Utils.scss';
 
 .study {
-  margin-top: 200px;
+  margin-top: 100px;
+
+  .question-index {
+    display: flex;
+    justify-content: flex-end;
+    width: 80%;
+    font-size: 25px;
+    margin-bottom: 50px;
+  }
 
   .word {
     font-size: 30px;

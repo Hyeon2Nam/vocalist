@@ -19,7 +19,9 @@ const Study = () => {
   const makeNewContent = () => {
     if (content && !remade) {
       const tmp = content.split('\n').map((word) => {
-        const i = word.indexOf(' ');
+        let i;
+        if (word.includes(')')) i = word.indexOf(')');
+        else i = word.indexOf(' ');
         return [word.slice(0, i), word.slice(i + 1)];
       });
 
@@ -35,8 +37,8 @@ const Study = () => {
   return (
     <div className="study">
       {makeNewContent()}
-      {/* <Question /> */}
-      {firstComplete ? <Question /> : <MultipleChoice />}
+      <Question />
+      {/* {firstComplete ? <Question /> : <MultipleChoice />} */}
     </div>
   );
 };
