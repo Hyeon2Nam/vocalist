@@ -38,8 +38,8 @@ const Study = () => {
   return (
     <div className="study">
       {makeNewContent()}
-      <Question />
-      {/* {firstComplete ? <Question /> : <MultipleChoice />} */}
+      {/* <Question /> */}
+      {firstComplete ? <Question /> : <MultipleChoice />}
     </div>
   );
 };

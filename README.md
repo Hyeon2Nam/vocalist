@@ -1,8 +1,10 @@
 # 단어장
 
+![mainPage image](https://github.com/Hyeon2Nam/vocalist/blob/master/images/mainPage.png)
+
 ## 개요
 
-단어 외우기 사이트 아무리 찾아도 마음에 드는 게 없어서 그냥 직접 만들기로 했습니다.<br/>
+단어 외우기 사이트 아무리 찾아도 마음에 드는 게 없어서 그냥 직접 만들기로 했습니다.<br/>
 와이파이가 안되는 장소에서도 단어를 외울 수 있도록 일부러 localhost에서만 작동하게 만들어서 외울때마다 귀찮겠지만 `yarn start` 해야합니다.<br/>
 로컬에서만 돌아가기도 하고 제가 단어를 컴으로만 외워서 모바일뷰 최적화가 안되어 있습니다.
 
@@ -13,6 +15,7 @@
 학습하기 페이지는 현재 자신이 추가한 카테고리(책장)와 카테고리별 단어장을 확인 할 수 있습니다.<br/>
 카테고리를 선택하면 그 카테고리에 속해있는 단어장들을 확인 할 수 있습니다.<br/>
 단어장을 클릭하면 해당 단어장안에 들어 있는 단어들을 확인 할 수 있습니다.
+![libraryList image](https://github.com/Hyeon2Nam/vocalist/blob/master/images/libraryList.png)
 
 학습은 단어장별 모드와 전체 학습 모드 두가지가 있습니다
 
@@ -20,6 +23,10 @@
 - 단어장별로 있는 학습 벼튼을 클릭할 경우 해당 단어장에 있는 단어들만 외울 수 있습니다.
 
 문제 모드는 객관식 모드와 주관식 모드가 있습니다. 객관식 모드가 먼저 실행 된 후 주관식 모드가 실행됩니다.<br/>
+![multiple choice question image](https://github.com/Hyeon2Nam/vocalist/blob/master/images/multipleChoiceQuestion.png)
+
+![subjective Question image](https://github.com/Hyeon2Nam/vocalist/blob/master/images/subjectiveQuestion.png)
+
 두 모드에 공통 사항
 
 - `skip 버튼`을 누르면 해당 문제를 건너뛸 수 있습니다.
@@ -30,6 +37,8 @@
 - `오답노트 추가 버튼`을 클릭하면 해당 문제가 오답노트에 추가가 되며, 오답노트에 추가가 된 단어들은 해당 객관식 모드 사이클이 한번 끝나면 바로 이어서 해당 단어들이 다시 문제로 나옵니다.
 
 ### 단어장 추가 페이지
+
+![add Book Page image](https://github.com/Hyeon2Nam/vocalist/blob/master/images/addBookPage.png)
 
 - 단어장을 추가할 카테고리(책장)를 선택할 수 있습니다.
 - 카테고리를 해당 페이지에서 추가할 수 있습니다.

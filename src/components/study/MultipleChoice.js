@@ -167,7 +167,9 @@ const MultipleChoice = () => {
           </Button>
         }
       />
-      {word && <ActionButton onSkip={handleSkip} />}
+      {word && (
+        <ActionButton color="complete" text="skip" onAction={handleSkip} />
+      )}
     </div>
   );
 };
