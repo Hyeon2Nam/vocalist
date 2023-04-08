@@ -49,6 +49,12 @@
   .question {
     color: white;
 
+    .word-button {
+      display: flex;
+      justify-content: space-around;
+      margin-top: 50px;
+    }
+
     .answer-filed {
       display: flex;
       flex-direction: column;

@@ -11,6 +11,12 @@
     text-decoration: none;
   }
 
+  .book {
+    margin: 10px 0px 10px 30px;
+    text-align: initial;
+    white-space: break-spaces;
+  }
+
   .category {
     font-size: 19px;
     width: 100%;
@@ -35,11 +41,5 @@
 
   .book-list {
     padding: 15px;
-  }
-
-  .book {
-    margin: 10px 0px 10px 30px;
-    text-align: initial;
-    white-space: break-spaces;
   }
 }

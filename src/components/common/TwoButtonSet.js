@@ -8,13 +8,6 @@ const TwoButtonSet = ({ onConfirm, onCancle }) => {
     <div className="button-wrapper">
       <CustomColorButton
         button={
-          <Button className="button" variant="contained" onClick={onConfirm}>
-            추가
-          </Button>
-        }
-      />
-      <CustomColorButton
-        button={
           <Button
             className="button"
             variant="contained"
@@ -22,6 +15,13 @@ const TwoButtonSet = ({ onConfirm, onCancle }) => {
             onClick={onCancle}
           >
             취소
+          </Button>
+        }
+      />
+      <CustomColorButton
+        button={
+          <Button className="button" variant="contained" onClick={onConfirm}>
+            추가
           </Button>
         }
       />

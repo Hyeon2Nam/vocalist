@@ -43,7 +43,15 @@ const InputList = () => {
   };
 
   const AddNewLibrary = () => {
-    if (!newlibrary) return;
+    if (!newlibrary) {
+      alert('책장의 이름이 비어있습니다.');
+      return;
+    }
+    if (newlibrary === 'addbook') {
+      alert('다른 이름으로 해주십시오.');
+      setNewLibrary('');
+      return;
+    }
 
     setLibrary({
       ...library,
@@ -130,7 +138,7 @@ const InputList = () => {
         />
         <textarea
           className="word-area"
-          placeholder="단어 뜻, 뜻1"
+          placeholder="단어는 [단어 뜻, 뜻1] 문장은 [문장)뜻] ([]<=괄호 입력 X)"
           onChange={NewBookHandler}
           value={newBook.content}
           name="content"

@@ -63,7 +63,7 @@ CollapseButton.propTypes = {
   content: PropTypes.oneOfType([PropTypes.string, PropTypes.array]).isRequired,
   title: PropTypes.string.isRequired,
   // eslint-disable-next-line react/forbid-prop-types
-  child: PropTypes.object.isRequired,
+  child: PropTypes.oneOfType([PropTypes.string, PropTypes.object]).isRequired,
 };
 
 export default CollapseButton;

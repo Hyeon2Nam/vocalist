@@ -6,6 +6,7 @@ import { Button } from '@mui/material/index';
 import CustomColorButton from '../common/CustomColorButton';
 import * as util from '../common/utils';
 import { firstComplete } from '../../modules/data';
+import ActionButton from '../common/ActionButton';
 
 const MultipleChoice = () => {
   const navigate = useNavigate();
@@ -90,6 +91,10 @@ const MultipleChoice = () => {
     }
   };
 
+  const handleSkip = () => {
+    setExam();
+  };
+
   useEffect(() => {
     if (!content || content == null) {
       navigate('/library');
@@ -162,6 +167,7 @@ const MultipleChoice = () => {
           </Button>
         }
       />
+      {word && <ActionButton onSkip={handleSkip} />}
     </div>
   );
 };

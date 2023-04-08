@@ -18,12 +18,13 @@ const Study = () => {
 
   const makeNewContent = () => {
     if (content && !remade) {
-      const tmp = content.split('\n').map((word) => {
+      let tmp = content.split('\n').map((word) => {
         let i;
         if (word.includes(')')) i = word.indexOf(')');
         else i = word.indexOf(' ');
         return [word.slice(0, i), word.slice(i + 1)];
       });
+      tmp = tmp.filter((w) => w[0] !== '');
 
       dispatch(remadeContent(tmp));
     }
