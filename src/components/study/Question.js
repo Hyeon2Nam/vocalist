@@ -29,24 +29,24 @@ const Question = () => {
     setShow(!show);
   };
 
-  // const setWordLang = (set) => {
-  //   if (!set) return;
-
-  //   if (lang) {
-  //     setWord(set[1]);
-  //     setAnswer(set[0]);
-  //   } else {
-  //     setWord(set[0]);
-  //     setAnswer(set[1]);
-  //   }
-  // };
-
   const setWordLang = (set) => {
     if (!set) return;
-    setLang(1);
-    setWord(set[1]);
-    setAnswer(set[0]);
+
+    if (lang) {
+      setWord(set[1]);
+      setAnswer(set[0]);
+    } else {
+      setWord(set[0]);
+      setAnswer(set[1]);
+    }
   };
+
+  // const setWordLang = (set) => {
+  //   if (!set) return;
+  //   setLang(1);
+  //   setWord(set[1]);
+  //   setAnswer(set[0]);
+  // };
 
   const setNewExam = () => {
     setIndex(0);
