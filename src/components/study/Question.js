@@ -136,7 +136,7 @@ const Question = () => {
 
   return (
     <div className="question">
-      {content.length !== maxIndex ? '오답 노트' : '단어 맞추기'}
+      {content.length !== maxIndex ? '오답 노트' : '주관식 문제'}
       <br /> <br />
       {word && (
         <div className="question-index">
