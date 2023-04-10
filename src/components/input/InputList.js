@@ -56,7 +56,7 @@ const InputList = () => {
       dispatch(setMessage('책장의 이름이 비어있습니다.'));
       return;
     }
-    if (newlibrary === 'addbook') {
+    if (newlibrary.toLowerCase() === 'addbook') {
       dispatch(setMessage('다른 이름으로 해주십시오.'));
       setNewLibrary('');
       return;
