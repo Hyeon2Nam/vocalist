@@ -6,6 +6,7 @@ const SET_CONTENT = 'data/SET_CONTENT';
 const REMADE_CONTENT = 'data/REMADE_CONTENT';
 const FIRST_COMPLETE = 'data/FIRST_COMPLETE';
 const RESET = 'data/RESET';
+const SET_MESSAGE = 'data/MESSAGE';
 
 export const setCategory = createAction(SET_CATEGORY, (category) => category);
 export const allRange = createAction(ALL_RANGE, ({ isAll, content }) => ({
@@ -16,6 +17,7 @@ export const setContent = createAction(SET_CONTENT, (content) => content);
 export const remadeContent = createAction(REMADE_CONTENT, (content) => content);
 export const firstComplete = createAction(FIRST_COMPLETE);
 export const reset = createAction(RESET);
+export const setMessage = createAction(SET_MESSAGE, (message) => message);
 
 const initialState = {
   category: '',
@@ -23,6 +25,7 @@ const initialState = {
   content: null,
   remade: false,
   firstComplete: false,
+  message: '',
 };
 
 const data = handleActions(
@@ -59,6 +62,10 @@ const data = handleActions(
     }),
     [RESET]: () => ({
       initialState,
+    }),
+    [SET_MESSAGE]: (state, { payload: message }) => ({
+      ...state,
+      message,
     }),
   },
   initialState,

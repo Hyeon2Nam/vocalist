@@ -1,18 +1,21 @@
 /* eslint-disable no-unused-vars */
 import React, { useEffect, useState } from 'react';
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import { Button } from '@mui/material/index';
 import TextField from '@mui/material/TextField';
 import CustomColorButton from '../common/CustomColorButton';
 import * as util from '../common/utils';
 import ActionButton from '../common/ActionButton';
+import { setMessage } from '../../modules/data';
 
 const Question = () => {
+  const dispatch = useDispatch();
   const navigate = useNavigate();
   const { content } = useSelector(({ data }) => ({
     content: data.content,
   }));
+
   const [word, setWord] = useState('');
   const [answer, setAnswer] = useState('');
   const [wordList, setWordList] = useState([]);
@@ -107,6 +110,8 @@ const Question = () => {
       return;
 
     setWrongWrodList(wrongWrodList.concat([wrongWord]));
+
+    dispatch(setMessage('추가되었습니다.'));
   };
 
   useEffect(() => {
