@@ -24,7 +24,7 @@ const MultipleChoice = () => {
 
   const setOption = () => {
     const tmp = [...content];
-    const max = tmp.length < 3 ? tmp.length - 1 : 3;
+    const max = tmp.length - 1;
     const tmpList = [];
 
     let del;
